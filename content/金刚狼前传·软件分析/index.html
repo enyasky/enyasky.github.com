@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <title>金刚狼前传·软件分析</title>
+  <script src="http://enyasky.github.io/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="http://enyasky.github.io/bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/paper-drawer-panel/paper-drawer-panel.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/paper-toolbar/paper-toolbar.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/paper-fab/paper-fab.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/paper-item/paper-item.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/paper-menu/paper-menu.html">
+  <link rel="import" href="http://enyasky.github.io/bower_components/iron-image/iron-image.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <style is="custom-style">
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .nav {
+      border-right: 1px solid #ccc;
+    }
+    
+    paper-scroll-header-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--paper-grey-200, #eee);
+       
+      --paper-scroll-header-panel-full-header: {
+        background-image: url(http://enyasky.github.io/images/cover.png);
+      };
+       
+      --paper-scroll-header-panel-condensed-header: {
+        background-image: url(http://enyasky.github.io/images/cover.png);
+      };
+    }
+    
+    paper-toolbar {
+       
+      height: 256px;
+      background-color: transparent;
+    }
+    .profile{
+      width: 100%;
+      padding-bottom: 20px;
+    }
+    .photo{
+      margin: 20px;
+      display: inline-block;
+      height: 64px; width: 64px;
+      border-radius: 50%;
+    }
+    .article{
+      border: 1px solid #bebebe;
+      padding: 16px;
+      margin: 16px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .title{
+      font-size: 22px;
+      padding: 8px 0 16px;
+    }
+    .description{
+      font-size: 16px;
+      padding-bottom: 8px;
+    }
+    .author{
+      font-size: 16px;
+      padding-left: 20px;
+      color: white;
+    }
+    .design{
+      font-size: 14px;
+    }
+    .copyright{
+      font-size: 16px;
+    }
+    paper-menu a {
+      text-decoration: none;
+      color: #212121;
+    }
+  </style>
+
+</head>
+<body>
+  <paper-drawer-panel id="drawerPanel" responsive-width="1280px">
+    <div class="nav scroll" drawer>
+    
+      <iron-image class="profile" sizing="cover" src="http://enyasky.github.io/images/profile.png">
+    
+        
+          <iron-image class="photo" sizing="cover" src="http://enyasky.github.io/images/photo.png"></iron-image>
+        
+          <div class="author">enyasky</div>
+      </iron-image>
+      <paper-menu>
+        <a href="http://enyasky.github.io"><paper-item>
+          <iron-icon icon="home"></iron-icon>　<div class="flex">Home</div>
+          <iron-icon icon="chevron-right"></iron-icon>
+        </paper-item></a>
+        <a href="http://enyasky.github.io/categories/"><paper-item>
+          <iron-icon icon="drafts"></iron-icon>　<div class="flex">Categories</div>
+          <iron-icon icon="chevron-right"></iron-icon>
+        </paper-item></a>
+        <a href="http://enyasky.github.io/tags/"><paper-item>
+          <iron-icon icon="loyalty"></iron-icon>　<div class="flex">Tags</div>
+          <iron-icon icon="chevron-right"></iron-icon>
+        </paper-item></a>
+      </paper-menu>
+    </div>
+
+    <paper-scroll-header-panel main condenses header-height="256" condensed-header-height="64">
+
+      <paper-toolbar>
+
+        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+        <div class="bottom title">观星志</div>
+        <div class="flex"></div>
+        
+          <a href="https://www.facebook.com/SKY.enya"><paper-icon-button src="http://enyasky.github.io/images/facebook-dreamstale25.png"></paper-icon-button></a>
+        
+        
+          <a href="https://twitter.com/enyaSKY"><paper-icon-button src="http://enyasky.github.io/images/twitter-dreamstale71.png"></paper-icon-button></a>
+        
+        
+        
+          <a href="https://www.linkedin.com/in/%e5%bc%a0-%e6%a5%9a%e5%85%b5-4336b035"><paper-icon-button src="http://enyasky.github.io/images/linkedin-dreamstale45.png"></paper-icon-button></a>
+        
+        
+          <a href="https://github.com/enyasky"><paper-icon-button src="http://enyasky.github.io/images/github2-dreamstale35.png"></paper-icon-button></a>
+        
+          <a href="http://enyasky.github.io/index.xml"><paper-icon-button src="http://enyasky.github.io/images/feed-dreamstale27.png"></paper-icon-button></a>
+      
+      </paper-toolbar>
+
+
+
+<div class="content">
+
+  <div class="article">
+    <div class="title">金刚狼前传·软件分析</div>
+    
+      <div class="categories">
+        
+          <a href="http://enyasky.github.io/categories/thinking/">thinking</a>
+        
+      </div>
+     
+    <div class="description"><p>1、有内在才能出现好产品 金刚狼这样的白金级杀手是如何形成的，是影片的宗旨。看完之后就会发现，好产品不是无故产生的： 产品特征-身为不死之躯，自生迭代，将自己的长处充分发挥 经验丰富-参加过无数战役，战斗经验丰富 遇到良机-由于自身特点，遇到改良时机。</p>
+
+<p>2、好产品的出现要有机遇 机遇的出现，造就了好产品，也使其失去某些东西。现实就是这样，当遇到机遇时，产品必须摒弃掉自身的一些弱点，这样才能成为炙手可热的好产品。</p>
+
+<p>3、copy&amp;paste形成的产品没有核心竞争力 X+1 Boss很遗憾的成为了一个失败的作品，原因有很多，但东拼西凑形成的东西没有核心竞争力，必然导致被淘汰。 所以核心竞争力是一个产品的核心价值，每个产品必须要有自己的核心竞争力。</p>
+</div>
+    <div class="tags">
+      25 Feb 2010
+      
+        
+          <a href="http://enyasky.github.io/tags/film/">#film</a>
+        
+       
+    </div>
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+     
+    var disqus_shortname = 'szugesz';
+    
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+  </div>
+
+</div>
+
+<paper-item>
+  
+    <paper-fab disabled icon="chevron-left"></paper-fab>
+  
+    <div class="flex"></div>
+  
+    <paper-fab disabled icon="chevron-right"></paper-fab>
+  
+</paper-item>
+
+      <paper-item>
+        <div class="copyright">©白日观天夜观星；坐井。</div>
+        <div class="flex"></div>
+        <div class="design">Design <a href="http://pdevty.github.io/blog/">pdevty</a></div>
+      </paper-item>
+    </paper-scroll-header-panel>
+  </paper-drawer-panel>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+</body>
+</html>
