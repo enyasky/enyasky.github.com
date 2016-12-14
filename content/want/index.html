@@ -1,12 +1,11 @@
 
-
 <!doctype html>
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-  <title>Categories</title>
+  <title>want</title>
   <script src="http://enyasky.github.io/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="http://enyasky.github.io/bower_components/iron-icons/iron-icons.html">
   <link rel="import" href="http://enyasky.github.io/bower_components/paper-drawer-panel/paper-drawer-panel.html">
@@ -144,14 +143,68 @@
 
 
 
+<div class="content">
 
-<paper-menu>
+  <div class="article">
+    <div class="title">want</div>
+    
+      <div class="categories">
+        
+          <a href="http://enyasky.github.io/categories/code/">code</a>
+        
+      </div>
+     
+    <div class="description"><p>want默认并未支持innosetup的tag<br />
+需要手工添加对innosetup的支持<br />
+add InnoSetupTasks to the follow two files:<br />
+StandardTasks.pas</p>
+
+<p>want.dpr<br />
+the use this target to run innosetup:</p>
+
+<pre><code>&lt;target name=&quot;deploy&quot;&gt;  
+&lt;iscc source = &quot;${deploy}\Soaring Dove.iss&quot;&gt;  
+&lt;/iscc&gt;  
+&lt;/target&gt;  
+</code></pre>
+
+<p>want与dunit<br />
+want使用dunit进行内部测试时，有时会出现问题。<br />
+原因是由于编译want时的dunit版本造成的，通常所使用的want-0.3.3其编译时使用的为dunit-7.2.1，而不是通常使用的dunit-9.3.0、dunit_v9.2.1。<br />
+需要重新进行want的编译，将相应的dunit拷入want\lib中，重新编译即可。</p>
+</div>
+    <div class="tags">
+      2 Apr 2010
+       
+    </div>
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+     
+    var disqus_shortname = 'szuge';
+    
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+  </div>
+
+</div>
+
+<paper-item>
   
-    <a href="http://enyasky.github.io/categories/code"><paper-item><iron-icon icon="drafts"></iron-icon>　<div class="flex">code</div> 1</paper-item></a>
+    <paper-fab disabled icon="chevron-left"></paper-fab>
   
-    <a href="http://enyasky.github.io/categories/thinking"><paper-item><iron-icon icon="drafts"></iron-icon>　<div class="flex">thinking</div> 1</paper-item></a>
+    <div class="flex"></div>
   
-</paper-menu>
+    <a href="http://enyasky.github.io/content/%E9%87%91%E5%88%9A%E7%8B%BC%E5%89%8D%E4%BC%A0%C2%B7%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/"><paper-fab icon="chevron-right"></paper-fab></a>
+  
+</paper-item>
 
       <paper-item>
         <div class="copyright">©白日观天夜观星；坐井。</div>

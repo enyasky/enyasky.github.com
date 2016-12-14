@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>观星志</title>
+    <link>http://enyasky.github.io/categories/code/index.xml</link>
+    <description>Recent content on 观星志</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©白日观天夜观星；坐井。</copyright>
+    <atom:link href="http://enyasky.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>want</title>
+      <link>http://enyasky.github.io/content/want/</link>
+      <pubDate>Fri, 02 Apr 2010 15:24:44 +0800</pubDate>
+      
+      <guid>http://enyasky.github.io/content/want/</guid>
+      <description>&lt;p&gt;want默认并未支持innosetup的tag&lt;br /&gt;
+需要手工添加对innosetup的支持&lt;br /&gt;
+add InnoSetupTasks to the follow two files:&lt;br /&gt;
+StandardTasks.pas&lt;/p&gt;
+
+&lt;p&gt;want.dpr&lt;br /&gt;
+the use this target to run innosetup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;target name=&amp;quot;deploy&amp;quot;&amp;gt;  
+&amp;lt;iscc source = &amp;quot;${deploy}\Soaring Dove.iss&amp;quot;&amp;gt;  
+&amp;lt;/iscc&amp;gt;  
+&amp;lt;/target&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;want与dunit&lt;br /&gt;
+want使用dunit进行内部测试时，有时会出现问题。&lt;br /&gt;
+原因是由于编译want时的dunit版本造成的，通常所使用的want-0.3.3其编译时使用的为dunit-7.2.1，而不是通常使用的dunit-9.3.0、dunit_v9.2.1。&lt;br /&gt;
+需要重新进行want的编译，将相应的dunit拷入want\lib中，重新编译即可。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,8 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©白日观天夜观星；坐井。</copyright>
-    <lastBuildDate>Thu, 25 Feb 2010 15:24:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 Apr 2010 15:24:44 +0800</lastBuildDate>
     <atom:link href="http://enyasky.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>want</title>
+      <link>http://enyasky.github.io/content/want/</link>
+      <pubDate>Fri, 02 Apr 2010 15:24:44 +0800</pubDate>
+      
+      <guid>http://enyasky.github.io/content/want/</guid>
+      <description>&lt;p&gt;want默认并未支持innosetup的tag&lt;br /&gt;
+需要手工添加对innosetup的支持&lt;br /&gt;
+add InnoSetupTasks to the follow two files:&lt;br /&gt;
+StandardTasks.pas&lt;/p&gt;
+
+&lt;p&gt;want.dpr&lt;br /&gt;
+the use this target to run innosetup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;target name=&amp;quot;deploy&amp;quot;&amp;gt;  
+&amp;lt;iscc source = &amp;quot;${deploy}\Soaring Dove.iss&amp;quot;&amp;gt;  
+&amp;lt;/iscc&amp;gt;  
+&amp;lt;/target&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;want与dunit&lt;br /&gt;
+want使用dunit进行内部测试时，有时会出现问题。&lt;br /&gt;
+原因是由于编译want时的dunit版本造成的，通常所使用的want-0.3.3其编译时使用的为dunit-7.2.1，而不是通常使用的dunit-9.3.0、dunit_v9.2.1。&lt;br /&gt;
+需要重新进行want的编译，将相应的dunit拷入want\lib中，重新编译即可。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>金刚狼前传·软件分析</title>
@@ -20,8 +47,9 @@
 金刚狼这样的白金级杀手是如何形成的，是影片的宗旨。看完之后就会发现，好产品不是无故产生的：&lt;br /&gt;
 产品特征-身为不死之躯，自生迭代，将自己的长处充分发挥 。&lt;br /&gt;
 经验丰富-参加过无数战役，战斗经验丰富&lt;br /&gt;
-遇到良机-由于自身特点，遇到改良时机。&lt;br /&gt;
-2、好产品的出现要有机遇&lt;br /&gt;
+遇到良机-由于自身特点，遇到改良时机。&lt;/p&gt;
+
+&lt;p&gt;2、好产品的出现要有机遇&lt;br /&gt;
 机遇的出现，造就了好产品，也使其失去某些东西。现实就是这样，当遇到机遇时，产品必须摒弃掉自身的一些弱点，这样才能成为炙手可热的好产品。&lt;/p&gt;
 
 &lt;p&gt;3、copy&amp;amp;paste形成的产品没有核心竞争力&lt;br /&gt;
